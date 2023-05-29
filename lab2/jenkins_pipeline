@@ -1,10 +1,14 @@
-pipeline {
-    agent any
-    stages {
-     stage('Hello') {
-                steps {
-                    echo 'Hello world'
-                }
-            }
-     }
-}
+#!/bin/bash
+source /home/user/projects/venvs/lab1/bin/activate
+echo "-----Генерация данных (начало)-----"
+python3 /home/user/projects/labs/lab2/data_creation.py
+echo "-----Генерация данных (конец)-----"
+echo "-----Предварительная обработка данных (начало)-----"
+python3 /home/user/projects/labs/lab2/data_preprocessing.py
+echo "-----Предварительная обработка данных (конец)-----"
+echo "-----Подготовка модели (начало)-----"
+python3 /home/user/projects/labs/lab2/model_preparation.py
+echo "-----Подготовка модели (конец)-----"
+echo "-----Тестирование модели (начало)-----"
+python3 /home/user/projects/labs/lab2/model_testing.py
+echo "-----Тестирование модели (конец)-----"

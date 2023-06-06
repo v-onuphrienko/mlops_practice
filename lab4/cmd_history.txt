@@ -1,0 +1,232 @@
+    1  cat /var/lib/jenkins/secrets/initialAdminPassword 
+    2  cp projects/labs/lab1 projects/labs/lab2
+    3  cp -r projects/labs/lab1 projects/labs/lab2
+    4  chmod 777 projects/labs/lab2
+    5  chmod 777 projects/labs/lab1
+    6  chmod 777 projects/venvs/lab1
+    7  chmod 777 -R projects/venvs/lab1
+    8  chmod 777 -R projects/labs/lab2
+    9  cd projects/labs/lab2/
+   10  setfacl -m u:jenkins:rwx data_creation.py
+   11  setfacl -m u:jenkins:rwx data_preprocessing.py 
+   12  setfacl -m u:jenkins:rwx model_preparation.py 
+   13  setfacl -m u:jenkins:rwx model_testing.py 
+   14  usermod -a -G root jenkins
+   15  service jenkins restart
+   16  chmod 777 /home/user/projects/libs/lib2/data_creation.py
+   17  cd /home/user/projects/libs/lib2
+   18  cd /home/user/projects/libs
+   19  cd /home/user/projects/labs/lab2
+   20  chmod 777 data_creation.py 
+   21  chmod 777 data_preprocessing.py 
+   22  chmod 777 model_preparation.py 
+   23  chmod 777 model_testing.py 
+   24  cd /etc/systemd
+   25  reboot
+   26  mc
+   27  ./pipeline.sh 
+   28  source ../../../projects/venvs/lab1/
+   29  source ../../../projects/venvs/lab1/bin/activate
+   30  ./pipeline.sh 
+   31  ./pipeline.sh 
+   32  apt-get install jenkins
+   33  curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+   34  curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \ /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+   35  curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+   36  echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+   37  sudo apt-get update
+   38  sudo apt-get install jenkins
+   39  servide jenkins status
+   40  servise jenkins status
+   41  service jenkins status
+   42  source projects/venvs/lab1/bin/activate
+   43  pip install numpy
+   44  pip install pandas
+   45  pip install sklearn
+   46  pip install scikit-learn
+   47  pip install pickle
+   48  mkdir projects/labs
+   49  mkdir projects/labs/lab1
+   50  cd projects/labs/lab1
+   51  mc
+   52  apt-get install mc
+   53  sudo fs
+   54  nemo
+   55  ./pipeline.sh 
+   56  mc
+   57  exit
+   58  systemctl daemon-reload
+   59  service docker restart
+   60  docker run hello-world
+   61  exixt
+   62  exit
+   63  systemctl daemon-reload
+   64  service docker restart
+   65  docker run hello-world
+   66  service docker restart
+   67  docker run hello-world
+   68  ping ya.ru
+   69  ifconfig
+   70  docker run hello-world
+   71  service docker restart
+   72  docker run hello-world
+   73  exit
+   74  docker run hello-world
+   75  exit
+   76  nemo
+   77  cd projects/
+   78  cd labs/lab3/
+   79  docker run dockerfile 
+   80  docker run --detach 'dockerfile'
+   81  docker image build –t lab3:v1
+   82  docker images
+   83  docker build --tag 'lab3' .
+   84  mc
+   85  docker build --tag 'lab3' .
+   86  docker run hello-world
+   87  mc
+   88  docker run hello-world
+   89  docker build --tag 'lab3' .
+   90  mc
+   91  docker build --tag 'lab3' .
+   92  mc
+   93  docker build --tag 'lab3' .
+   94  nemo
+   95  mc
+   96  docker build --tag 'lab3' .
+   97  mc
+   98  docker build --tag 'lab3' .
+   99  mc
+  100  docker build --tag 'lab3' .
+  101  mc
+  102  docker build --tag 'lab3' .
+  103  mc
+  104  docker build --tag 'lab3' .
+  105  mc
+  106  docker build --tag 'lab3' .
+  107  exit
+  108  usermod -aG docker user
+  109  usermod -aG docker root
+  110  exit
+  111  cd projects/labs/lab3/
+  112  docker build --tag 'lab3' .
+  113  exit
+  114  sudo apt-get install ca-certificates curl gnupg lsb-release
+  115  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+  116  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \ 
+  117  (lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  118  apt-get update
+  119  cd projects/labs/lab3
+  120  docker build --tag 'lab3' .
+  121  sudo apt-get remove docker docker-engine docker.io containerd runc
+  122  sudo apt-get remove docker* docker-engine docker.io containerd runc
+  123  sudo apt-get update
+  124  sudo apt-get install ca-certificates curl gnupg lsb-release
+  125  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+  126  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \ 
+  127  (lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  128  sudo apt-get update
+  129  sudo apt-get install docker-ce docker-ce-cli containerd.io
+  130  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+  131  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \ 
+  132  (lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  133  sudo apt-get update
+  134  mc
+  135  exit
+  136  mkdir datasets
+  137  cd ..
+  138  rm -R lab3
+  139  rm -R lab4
+  140  mkdir main_lab
+  141  cd main_lab
+  142  git remote add mlops_labs https://github.com/v-onuphrienko/mlops_practice
+  143  git remote
+  144  git init
+  145  git remote add mlops_labs https://github.com/v-onuphrienko/mlops_practice
+  146  git remote
+  147  git fetch mlops_labs
+  148  ls
+  149  mc
+  150  git pull mlops_labs
+  151  git pull mlops_labs master
+  152  ls
+  153  cd lab1
+  154  ls
+  155  cd ..
+  156  cd lab4
+  157  dvc init
+  158  cd ..
+  159  dvc init
+  160  git commit
+  161  dvc add lab4/datasets
+  162  git add .
+  163  git status
+  164  git commit
+  165  touch fillnan.py
+  166  pip install pandas
+  167  ping ya.ry
+  168  ping ya.ru
+  169  pip install pandas
+  170  python fillnan.py 
+  171  python3 fillnan.py 
+  172  python3
+  173  cd ..
+  174  dvc add datasets
+  175  dvc add lab4/datasets
+  176  git add .
+  177  git commit
+  178  git push mlops_practice
+  179  git remote list
+  180  git list
+  181  git push
+  182  man git
+  183  git push mlops_labs
+  184  dvc push gd_lab4
+  185  dvc push -r gd_lab4
+  186  python3
+  187  cd lab4
+  188  python3
+  189  cd ..
+  190  dvc add lab4/datasets
+  191  git add .
+  192  git commit
+  193  git push mlops_labs
+  194  dvc push -r gd_lab4
+  195  git checkout 1e1e750988b24da06ad8cc2587354349d3735bbb
+  196  cd ..
+  197  dvc pull gd_lab4
+  198  dvc pull -r gd_lab4
+  199  git checkout 612f5752e1ed2cae91bffb2c4f68207614273320
+  200  dvc pull -r gd_lab4
+  201  git checkout HEAD`1
+
+\q
+exit
+  202  git checkout HEAD^1
+  203  dvc pull -r gd_lab4
+  204  git checkout 612f5752e1ed2cae91bffb2c4f68207614273320
+  205  dvc pull -r gd_lab4
+  206  git checkout 11d179e4032208b97ce67089955f595fa4b15863
+  207  dvc pull -r gd_lab4
+  208  git checkout fd7c6b3b349bedf716cd27b3e9af1c627977e713
+  209  dvc pull -r gd_lab4
+  210  history > lab4/cmd_history.txt
+  211  cd ..
+  212  git add .
+  213  git commit
+  214  git reset HEAD~
+  215  git status
+  216  git chekout fd7c6b3b349bedf716cd27b3e9af1c627977e713
+  217  git checkout fd7c6b3b349bedf716cd27b3e9af1c627977e713
+  218  git status
+  219  git add .
+  220  git commit
+  221  git push mlops_labs
+  222  git branch master
+  223  git checkout master
+  224  git reset HEAD~
+  225  git status
+  226  git pull mlops_labs
+  227  git pull mlops_labs:master
+  228  git pull mlops_labs master
+  229  history > lab4/cmd_history.txt
